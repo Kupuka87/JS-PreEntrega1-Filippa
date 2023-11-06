@@ -57,6 +57,11 @@ function boxMensaje(mensaje) {
           boxMensaje("El número es menor. Intenta de nuevo.");
         }
       } else if (intentos === 5) {
+        if (guess < numeroAleatorio) {
+            boxMensaje("El número es mayor. Intenta de nuevo.");
+          } else if (guess > numeroAleatorio) {
+            boxMensaje("El número es menor. Intenta de nuevo.");
+          }
         boxMensaje("¡Cuidado! El siguiente es tu último intento.");
       } else if (intentos === 6) {
         boxMensaje(`Se acabaron los intentos. El número era ${numeroAleatorio}. Ahora las consecuencias`);
